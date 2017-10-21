@@ -1,2 +1,2 @@
 # ladivaar-react-native
-Ladivaar Mobile App - React Native - Android &amp; iOs
+Ladivaar.com Mobile App - React Native - Android &amp; iOS
