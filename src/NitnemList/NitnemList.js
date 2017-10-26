@@ -12,7 +12,7 @@ import {
 let myNewTextColor = 'forestgreen';
 
 //your new header background color
-let myNewHeaderBackgroundColor = 'pink';
+let myNewHeaderBackgroundColor = '#33373B';
 
 
 const styles = StyleSheet.create({
@@ -53,9 +53,9 @@ const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
 
 export default class NitnemList extends Component {
 	static navigationOptions = {
-		title: 'ਲੜੀਵਾਰ',
+		title: 'ਨਿਤਨੇਮ',
 		headerTitleStyle: {
-			color:'red',
+			color:'white',
 			flex:1,
 			fontSize:40,
 			paddingTop:25,
@@ -75,22 +75,30 @@ export default class NitnemList extends Component {
 				<View style={styles.content}>
 					<FlatList
 			          data={[
-			            {key: 'ਜਪੁਜੀ ਸਾਹਿਬ'},
-			            {key: 'ਜਾਪੁ ਸਾਹਿਬ'},
-			            {key: 'ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸ੍ਵਯੇ'},
-			            {key: 'ਚੌਪਈ ਸਾਹਿਬ'},
-			            {key: 'ਅਨੰਦੁ ਸਾਹਿਬ'},
-			            {key: 'ਰਹਰਾਸਿ ਸਾਹਿਬ'},
-			            {key: 'ਸੋਹਿਲਾ ਸਾਹਿਬ'}
+			            {key: 'ਜਪੁਜੀ ਸਾਹਿਬ', link:"NitnemBaniContent", baniKey:"japjeesahib"},
+			            {key: 'ਜਾਪੁ ਸਾਹਿਬ', link:"NitnemBaniContent", baniKey:"jaapsahib"},
+			            {key: 'ਤ੍ਵ ਪ੍ਰਸਾਦਿ ਸ੍ਵਯੇ', link:"NitnemBaniContent", baniKey:"tavprasadsavaiye"},
+			            {key: 'ਚੌਪਈ ਸਾਹਿਬ', link:"NitnemBaniContent", baniKey:"chaupaisahib"},
+			            {key: 'ਅਨੰਦੁ ਸਾਹਿਬ', link:"NitnemBaniContent", baniKey:"anandsahib"},
+			            {key: 'ਰਹਰਾਸਿ ਸਾਹਿਬ', link:"NitnemBaniContent", baniKey:"rehrassahib"},
+			            {key: 'ਸੋਹਿਲਾ ਸਾਹਿਬ', link:"NitnemBaniContent", baniKey:"sohilasahib"}
 			          ]}
-			          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+			          renderItem={({item}) => {
+			          		return (
+				          		<Text
+				          			style={styles.item}
+				          			onPress={() => {
+											navigate(item.link, { name: item.baniKey })
+					          			}
+									}
+				          		>
+					          		{item.key}
+					          	</Text>
+			          		)
+				    	}
+				      }
+
 			        />
-					<Button
-						title="Next"
-						onPress={() =>
-							navigate('NitnemList', { name: 'Jane' })
-						}
-					></Button>
 				</View>
 			</View>
 		);

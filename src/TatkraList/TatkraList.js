@@ -12,7 +12,7 @@ import {
 let myNewTextColor = 'forestgreen';
 
 //your new header background color
-let myNewHeaderBackgroundColor = 'pink';
+let myNewHeaderBackgroundColor = '#33373B';
 
 
 const styles = StyleSheet.create({
@@ -53,9 +53,9 @@ const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
 
 export default class TatkraList extends Component {
 	static navigationOptions = {
-		title: 'ਲੜੀਵਾਰ',
+		title: 'ਤਤਕਰਾ',
 		headerTitleStyle: {
-			color:'red',
+			color:'white',
 			flex:1,
 			fontSize:40,
 			paddingTop:25,
@@ -125,12 +125,6 @@ export default class TatkraList extends Component {
 			          ]}
 			          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
 			        />
-					<Button
-						title="Next"
-						onPress={() =>
-							navigate('NitnemList', { name: 'Jane' })
-						}
-					></Button>
 				</View>
 			</View>
 		);

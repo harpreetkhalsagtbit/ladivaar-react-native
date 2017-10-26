@@ -12,7 +12,7 @@ import {
 let myNewTextColor = 'forestgreen';
 
 //your new header background color
-let myNewHeaderBackgroundColor = 'pink';
+let myNewHeaderBackgroundColor = '#33373B';
 
 
 const styles = StyleSheet.create({
@@ -55,7 +55,7 @@ export default class Main extends Component {
 	static navigationOptions = {
 		title: 'ਲੜੀਵਾਰ',
 		headerTitleStyle: {
-			color:'red',
+			color:'white',
 			flex:1,
 			fontSize:40,
 			paddingTop:25,

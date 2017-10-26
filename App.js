@@ -6,6 +6,7 @@ import { StackNavigator } from 'react-navigation';
 import Main from './src/Main/Main'
 import NitnemList from './src/NitnemList/NitnemList'
 import TatkraList from './src/TatkraList/TatkraList'
+import NitnemBaniContent from './src/NitnemBaniContent/NitnemBaniContent'
 
 export default App = StackNavigator({
 	Main: {
@@ -16,6 +17,9 @@ export default App = StackNavigator({
 	},
 	TatkraList: {
 		screen: TatkraList
+	},
+	NitnemBaniContent: {
+		screen: NitnemBaniContent
 	}
 }, {
 	headerMode:'screen'
